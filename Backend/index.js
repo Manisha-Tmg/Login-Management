@@ -25,3 +25,9 @@ app.use("/products", productRouter);
 app.use("/reviews", reviewRouter);
 app.use("/file", fileRouter);
 app.use("/web-users", webUserRouter);
+
+// url middleware
+app.use("/", pageNotFound);
+
+// error middleware
+app.use(errorMiddleware);
